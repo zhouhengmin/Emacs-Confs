@@ -1,0 +1,18 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Nov  4 19:48:28 2011
+;; Desktop file format version 206
+;; Emacs version 23.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("buf_size" "buf_sise" "coding_categories" "priority" "Dp" "Cont" "wordfreq" "Con" "Cont" "map" "cont" "pair" "map" "01" "servic" "wordscnt"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/fex_unittest.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/fex_unittest.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/src/bufio.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/lib/feature_manager.cpp" "~/workspace/FeatureExtractionForDp/test/" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/rpm/t-algo-fex.spec" "/home/wenxun.zhm/workspace/algo_interface/branches/algolab/algo_path.conf" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/lib/detail/relevance_feature.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.exp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/fex_unittest" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/src/bufio.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/src/bufio.h" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/fex_unittest.cpp" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "/home/wenxun.zhm/abc" "/home/wenxun.zhm/tmp.txt" "/home/wenxun.zhm/workspace/algo_interface/branches/algolab/pid_cfgId.conf" "/home/wenxun.zhm/zhujun/emacs-config/.emacs" "/home/wenxun.zhm/.emacs" "/home/wenxun.zhm/workspace/algo_interface/branches/algolab/pid_cfgId.conf" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "~/workspace/FeatureExtractionForDp/test/data/GetFeature_1.dat" "~/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "GetFeature_501.dat" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_1.dat" "/home/wenxun.zhm/workspace/FeatureExtractionForDp/test/data/GetFeature_501.dat" "~/workspace/FeatureExtractionForDp/test/data/GetFeature_4.dat" "~/workspace/FeatureExtractionForDp/test/data/GetFeature_1.dat"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
