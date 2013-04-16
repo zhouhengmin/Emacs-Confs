@@ -37,14 +37,14 @@
 (defun google-c-lineup-expression-plus-4 (langelem)
   "Indents to the beginning of the current C expression plus 4 spaces.
 
-This implements title \"Function Declarations and Definitions\" of the Google
-C++ Style Guide for the case where the previous line ends with an open
-parenthese.
+ This implements title \"Function Declarations and Definitions\" of the Google
+ C++ Style Guide for the case where the previous line ends with an open
+ parenthese.
 
-\"Current C expression\", as per the Google Style Guide and as clarified by
-subsequent discussions,
-means the whole expression regardless of the number of nested parentheses, but
-excluding non-expression material such as \"if(\" and \"for(\" control
+ \"Current C expression\", as per the Google Style Guide and as clarified by
+ subsequent discussions,
+ means the whole expression regardless of the number of nested parentheses, but
+ excluding non-expression material such as \"if(\" and \"for(\" control
 structures.
 
 Suitable for inclusion in `c-offsets-alist'."
@@ -58,7 +58,7 @@ Suitable for inclusion in `c-offsets-alist'."
     (if (looking-at "\\(\\(if\\|for\\|while\\)\\s *(\\)")
         (goto-char (match-end 1)))
     (vector (+ 4 (current-column)))))
-        
+
 (defconst google-c-style
   `((c-recognize-knr-p . nil)
     (c-enable-xemacs-performance-kludge-p . t) ; speed up indentation in XEmacs
@@ -123,7 +123,7 @@ Suitable for inclusion in `c-offsets-alist'."
 
 (defun google-set-c-style ()
   "Set the current buffer's c-style to Google C/C++ Programming
-  Style. Meant to be added to `c-mode-common-hook'."
+                                 Style. Meant to be added to `c-mode-common-hook'."
   (interactive)
   (make-local-variable 'c-tab-always-indent)
   (setq c-tab-always-indent t)
@@ -131,11 +131,10 @@ Suitable for inclusion in `c-offsets-alist'."
 
 (defun google-make-newline-indent ()
   "Sets up preferred newline behavior. Not set by default. Meant
-  to be added to `c-mode-common-hook'."
+                                 to be added to `c-mode-common-hook'."
   (interactive)
   (define-key c-mode-base-map "\C-m" 'newline-and-indent)
   (define-key c-mode-base-map [ret] 'newline-and-indent))
 
 (provide 'google-c-style)
-;;; google-c-style.el ends here
-
+                                ;;; google-c-style.el ends here

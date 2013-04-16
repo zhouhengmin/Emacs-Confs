@@ -3,6 +3,11 @@
 (ido-mode 1)
 (menu-bar-mode -1)
 
+;;(setq-default indent-tabs-mode  nil)
+;;(setq tab-width 2
+;;      c-basic-offset 2)
+
+
 ;;; uncomment this line to disable loading of "default.el" at startup
 ;; (setq inhibit-default-init t)
 
@@ -22,7 +27,6 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
-;; '(cua-mode t nil (cua-base))
  '(desktop-save t)
  '(desktop-save-mode t)
  '(directory-abbrev-alist nil)
@@ -35,7 +39,7 @@
  '(indicate-empty-lines t)
  '(make-backup-files nil)
  '(python-guess-indent nil)
- '(python-indent 4)
+ '(python-indent 2)
  '(save-place t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -51,7 +55,10 @@
  '(default ((t (:inherit nil :stipple nil :background "#202020" :foreground "#DDDDDD" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 161 :width normal :family "apple-consolas"))))
  '(column-marker-1 ((t (:background "red"))))
  '(cursor ((t (:background "white"))))
- '(hl-line ((t (:background "#444444")))))
+ '(font-lock-comment-face ((((class color) (min-colors 8) (background dark)) (:foreground "red"))))
+ '(hl-line ((t (:background "#444444"))))
+ '(linum ((t (:inherit (shadow default)))))
+ '(shadow ((((class color) (min-colors 8) (background dark)) (:foreground "green")))))
 
 ;; font configuration
 ;; (set-default-font "Monospace-12")
@@ -65,18 +72,20 @@
 (require 'desktop)
 (require 'msb)(msb-mode 1)
 (require 'iswitchb)
-(require 'column-marker)
+;;(require 'column-marker)
 (require 'google-c-style)
-(require 'java-mode-indent-annotations)
+;;(require 'java-mode-indent-annotations)
+;; (require 'php-mode)
 
 ;; shell mode colors
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'c-mode-common-hook 
           (lambda () 
             (interactive) 
-            (column-marker-1 80)
+            ;;(column-marker-1 80)
             (c-toggle-auto-hungry-state 1)
-            (c-toggle-auto-newline 1)))
+            (c-toggle-auto-newline 1)
+            ))
 
 ;; c style
 ;; (add-hook 'c-mode-common-hook '(lambda () (c-set-style "stroustrup")))
@@ -87,7 +96,10 @@
 ;; (add-hook 'c-mode-common-hook '(lambda () (c-toggle-auto-hungry-state 1)))
 
 ;; java annotation indent
-(add-hook 'java-mode-hook 'java-mode-indent-annotations-setup)
+;; (add-hook 'java-mode-hook 'java-mode-indent-annotations-setup)
+;; (add-hook 'java-mode-hook 'google-set-c-style)
+;; (add-hook 'java-mode-hook 'google-make-newline-indent)
+
 
 ;;
 ;; count-words-region
@@ -169,3 +181,7 @@
 (dolist (coding-system '(gbk utf-8))
   (prefer-coding-system coding-system))
 (switch-global-coding-system 'utf-8)
+
+
+;; format line number, add space after line number
+(setq linum-format "%d ")
