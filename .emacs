@@ -3,6 +3,22 @@
 (ido-mode 1)
 (menu-bar-mode -1)
 
+;; packages repo
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(package-initialize)
+
+;; exec-path
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+;; clojure
+(require 'clojure-mode)
+
+;; rainbow-delimiters
+(global-rainbow-delimiters-mode 1)
+
 ;;(setq-default indent-tabs-mode  nil)
 ;;(setq tab-width 2
 ;;      c-basic-offset 2)
